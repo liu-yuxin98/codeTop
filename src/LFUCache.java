@@ -181,7 +181,6 @@ public class LFUCache {
         lfuCache.get(1);
         lfuCache.get(3);
         System.out.println(lfuCache.get(4));
-
     }
 
 }
