@@ -1,6 +1,4 @@
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Map;
+
 import java.util.Stack;
 
 public class longestValidParentheses {
@@ -9,16 +7,19 @@ public class longestValidParentheses {
         stack.add(-1);
         int max = 0;
         for(int i=0;i<s.length();i++){
-            if(s.charAt(i) =='('){
+            if(s.charAt(i)=='('){
                 stack.push(i);
             }else{
                 stack.pop();
                 if(stack.isEmpty()){
+                    // can not form parentheses with this ')' at char i
                     stack.push(i);
                 }else{
-                    max = Math.max(i-stack.peek(), max);
+                    max = Math.max(i-stack.peek(),max);
                 }
+
             }
+
         }
         return max;
     }
