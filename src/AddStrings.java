@@ -32,6 +32,9 @@ public class AddStrings {
         String num1 = "6913259244";
         String num2 = "71103343";
         System.out.println(sol.addStrings(num1, num2));
+        System.out.println((double)52/709);
+        System.out.println((double)99/1500);
+        System.out.println((double)30/622);
     }
 
 
