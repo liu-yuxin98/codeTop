@@ -10,6 +10,7 @@ public class partitionEqualSubset {
             return false;
         }
         int[][] dp = new int[nums.length][sum/2+1];
+        return true;
 
     }
 
