@@ -12,11 +12,24 @@ public class OneAndZero {
                    dp[j][k] = Math.max(dp[j][k], dp[j-(int)zero][k-(int)one]+1);
                }
            }
-           System.out.println(Arrays.deepToString(dp));
         }
 
         return dp[m][n];
 
+    }
+
+    public int combinationSum4(int[] nums, int target) {
+        int [] dp = new int[target+1];
+        dp[0] = 1;
+
+
+        for(int i=0;i<nums.length;i++){
+            for(int j=nums[i];j<=target;j++){
+
+                dp[j] += dp[j-nums[i]];
+            }
+        }
+        return dp[target];
     }
 
 
